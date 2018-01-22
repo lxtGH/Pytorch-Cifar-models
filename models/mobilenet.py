@@ -1,7 +1,10 @@
-'''MobileNet in PyTorch.
-
+#!/usr/bin/env python
+# -*- coding:utf-8 -*-
+# Author: Xiangtai Li
+# Mobile net V1 V2 implementation
+'''
+MobileNet in PyTorch.
 See the paper "MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications"
-for more details.
 '''
 import torch
 import torch.nn as nn
@@ -54,10 +57,17 @@ class MobileNet(nn.Module):
         return out
 
 
+
+
+
+
+
+
+
 def test():
     net = MobileNet()
     x = torch.randn(1,3,32,32)
     y = net(Variable(x))
     print(y.size())
 
-# test()
+#test()

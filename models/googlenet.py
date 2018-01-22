@@ -99,7 +99,11 @@ class GoogLeNet(nn.Module):
         out = self.linear(out)
         return out
 
-# net = GoogLeNet()
-# x = torch.randn(1,3,32,32)
-# y = net(Variable(x))
-# print(y.size())
+
+def test():
+    net = GoogLeNet()
+    x = torch.randn(1,3,32,32)
+    y = net(Variable(x))
+    print(y.size())
+
+#test()

@@ -100,10 +100,22 @@ def DenseNet161():
 def densenet_cifar():
     return DenseNet(Bottleneck, [6,12,24,16], growth_rate=12)
 
+def ChooseDenseNet(arg):
+    arg = int(arg)
+    if arg == 121 :
+        return DenseNet121()
+    if arg == 169 :
+        return DenseNet169()
+    if arg == 161:
+        return DenseNet161()
+    if arg == 201:
+        return DenseNet201()
+
 def test_densenet():
-    net = densenet_cifar()
+    net = ChooseDenseNet(201)
     x = torch.randn(1,3,32,32)
     y = net(Variable(x))
     print(y)
+    print(y.size())
 
-# test_densenet()
+#test_densenet()

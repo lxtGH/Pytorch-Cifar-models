@@ -1,0 +1,14 @@
+{
+  "data_dir": "/home/lxt/data",
+  "check_dir": "/home/lxt/data",
+  "model:": "VGG19",
+  "resume": false,
+  "train_batch": 128,
+  "test_batch": 100,
+  "opt": "sgd",
+  "lr": 0.001,
+  "momentum": 0.9,
+  "weight_decay": 5e-4,
+  "epoch": 200,
+  "no_cuda": false
+}
