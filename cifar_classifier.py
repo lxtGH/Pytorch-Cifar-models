@@ -48,7 +48,6 @@ class CifarClassifier(object):
         if cfg['opt'] == 'adagrad':
             self.optimizer == optim.Adagrad(self.net.parameters(),lr=cfg["lr"], momentum=cfg['momentum'],
                                             weight_decay=cfg['weight_decay'])
-
         # Loss Config
         self.criterion = nn.CrossEntropyLoss()
 
